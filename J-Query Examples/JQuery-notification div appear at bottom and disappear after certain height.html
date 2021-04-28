@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery</title>
+    <link rel="stylesheet" href="css/c07.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+        <li id="four">Apple</li>
+        <li id="four">banana</li>
+        <li id="four">Orage</li>
+        <li id="four">Peech</li>
+        <li id="four">Pine</li>
+        <li id="four">Coke</li>
+        <li id="four">Date</li>
+        <li id="four">vinegar</li>
+        <li id="four">Salt</li>
+        <li id="four">Shugar</li>
+        <li id="four">Tea</li>
+        <li id="four">Hello</li>
+        <li id="four">Bye</li>
+        <li id="four">Mayber</li>
+        <li id="four">Water</li>
+        <li id="four">Milk</li>
+        <li id="four">Apple</li>
+        <li id="four">banana</li>
+        <li id="four">Orage</li>
+        <li id="four">Peech</li>
+        <li id="four">Pine</li>
+        <li id="four">Coke</li>
+        <li id="four">vinegar</li>
+        <li id="four">Salt</li>
+        <li id="four">Shugar</li>
+        <li id="four">Tea</li>
+        <li id="four">Hello</li>
+      </ul>
+      <br>
+      <span id="footer">&#169; ListKing</span>
+      <br><br>
+      <div id="slideAd">
+        <span>BUY LISTKING PRO <br> FOR ONLY 1.99$</span>
+      </div>
+
+    </div>
+
+<script type="text/javascript">
+$('#slideAd').fadeOut();
+var a= $('#footer').offset().top - $(window).height();
+var b=a-500;
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  console.log(y);
+  if (y >= a) {
+    $('#slideAd').fadeIn();
+  }
+  if(y<=b){
+    $('#slideAd').fadeOut();
+  }
+});
+</script>
+    <script src="js/jquery-1.11.0.js"></script>
+  </body>
+</html>

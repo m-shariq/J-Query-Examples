@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JQuery</title>
+  <link rel="stylesheet" href="css/c07.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style media="screen">
+  . .t {
+    font-size: 4px;
+    color: black;
+  }
+</style>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot"><em>fresh</em> figs <span style="font-size:9px;" id="one1"></span></li>
+      <li id="two" class="hot">pine nuts <span style="font-size:9px;" id="two2"></span></li>
+      <li id="three" class="hot">honey <span style="font-size:9px;" id="three3"></span></li>
+      <li id="four">balsamic vinegar <span style="font-size:9px;" id="four4"></span></li>
+    </ul>
+  </div>
+  <script>
+
+  var b = "";
+  var d = new Date();
+  var i = d.toDateString()
+  var a = "Clicked on ";
+  d=d.toString();
+  var j = d.substring(15, 24);
+  a += i;
+  a += ' at ';
+  a += j;
+
+    $("li").click(function() {
+      if(this.id=='one'){
+        $("#one1").text(a);
+        $("#two2").text(b);
+        $("#three3").text(b);
+        $("#four4").text(b);
+      }
+      if(this.id=='two'){
+        $("#one1").text(b);
+        $("#two2").text(a);
+        $("#three3").text(b);
+        $("#four4").text(b);
+      }
+      if(this.id=='three'){
+        $("#one1").text(b);
+        $("#two2").text(b);
+        $("#three3").text(a);
+        $("#four4").text(b);
+      }
+      if(this.id=='four'){
+        $("#one1").text(b);
+        $("#two2").text(b);
+        $("#three3").text(b);
+        $("#four4").text(a);
+      }
+    });
+  </script>
+  <script src="js/jquery-1.11.0.js"></script>
+</body>
+
+</html>

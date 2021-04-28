@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JQuery</title>
+  <link rel="stylesheet" href="css/c07.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <h1 id="header">List</h1>
+    <h2>Buy groceries</h2>
+    <ul>
+      <li id="one" class="hot"><em>fresh</em> figs</li>
+      <li id="two" class="hot">pine nuts</li>
+      <li id="three" class="hot">honey</li>
+      <li id="four">balsamic vinegar</li>
+      <p id="display">Click or mouse over a hot item</p>
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+
+$("li").click(function() {
+  if(this.id=="three"){
+  var obj = $("#display").text('Item: honey\n Status: Important\n Event: Click');
+}
+if(this.id=="two"){
+  var obj = $("#display").text('Item: pine nuts\n Status: Important\n Event: Click');
+}
+if(this.id=="four"){
+  var obj = $("#display").text('Item: balsamic vinegar\n Status: Available\n Event: Click');
+}
+if(this.id=="one"){
+  var obj = $("#display").text('Item: fresh figs\n Status: Available\n Event: Click');
+}
+obj.html(obj.html().replace(/\n/g,'<br/>'));
+});
+$("li").mouseover(function() {
+  if(this.id=="three"){
+  var obj = $("#display").text('Item: honey\n Status: Important\n Event: mouseover');
+}
+if(this.id=="two"){
+  var obj = $("#display").text('Item: pine nuts\n Status: Important\n Event: mouseover');
+}
+if(this.id=="four"){
+  var obj = $("#display").text('Item: balsamic vinegar\n Status: Available\n Event: mouseover');
+}
+if(this.id=="one"){
+  var obj = $("#display").text('Item: fresh figs\n Status: Available\n Event: mouseover');
+}
+obj.html(obj.html().replace(/\n/g,'<br/>'));
+});
+  </script>
+
+  <script src="js/jquery-1.11.0.js"></script>
+</body>
+
+</html>
